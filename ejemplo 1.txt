@@ -1,9 +1,0 @@
-public class clas5ejmp1 {
-public static void main (String [] args){
-final int MAX = 4;
-int numero = 1;
-while (numero <= MAX){
-System.out.println("El numero es: "+numero); numero++;
-  }
- }
-}
