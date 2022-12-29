@@ -1,0 +1,40 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+/*Construir un programa que solicite desde teclado un número de
+mes y posteriormente notifique por pantalla la cantidad de días
+de ese mes. En el caso de que ingrese 2 como número de mes
+(febrero), para imprimir la cantidad de días deberá solicitar
+ingresar un número de anio (no usar ñ), para determinar si es
+bisiesto o no con la siguiente sentencia:
+_si ((anio % 4 == 0) && ((anio % 100 != 0) || (anio % 400 == 0))) es verdadero,
+entonces es bisiesto.*/
+public class clas4practico3 {
+  public static void main(String[] args) {
+    int nummes;
+    int numanio;
+    try{
+      BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+      System.out.println("Ingrese un numero de mes");
+      nummes = Integer.valueOf(entrada.readLine());
+     
+       if(nummes==1||nummes==3||nummes==5||nummes==7||nummes==8||nummes==10||nummes==12){
+        System.out.println("el mes tiene 31 dias");
+      }
+      else if(nummes==4||nummes==6||nummes==9||nummes==11){
+        System.out.println("el mes tiene 30 dias");
+
+      }
+      else if(nummes==2){
+        System.out.println("Ingrese un numero de año:");
+        numanio = Integer.valueOf(entrada.readLine());
+        if (((numanio % 4 == 0) && (numanio % 100 != 0) || (numanio % 400 == 0))){
+          System.out.println("el año es bisiesto");
+        }
+      }
+    }
+    catch (Exception exc){
+      System.out.println(exc);
+    }
+  }
+}
+
