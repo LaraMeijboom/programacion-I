@@ -1,0 +1,18 @@
+/*Dado un numero entero con valor inicial 1, hacer una iteración que haga
+incrementar numero de a uno hasta un valor MAX = 5 (constante). Mientras
+itera deberá imprimir si numero es par
+*/
+public class clas5ejmp4 {
+  public static void main(String[] args) {
+    int numero = 1;
+    final int MAX =5;
+    
+    do{
+      if(numero%2==0){
+        System.out.println(numero+" es par");
+         }
+        numero++;
+      } 
+      while(numero<=MAX); 
+  } 
+}
