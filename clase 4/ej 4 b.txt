@@ -1,0 +1,29 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+/*Calcular la epacta: es la edad de la luna en días el 1 de enero del
+año elegido, y se calcula de la siguiente forma:
+– Se resta 1 del número áureo, y se multiplica por 11 (en nuestro caso 10-1 = 9; 9*11
+= 99)
+– Después, se divide por 30 (un mes lunar) y de nuevo nos quedamos con el resto:
+99/30 = 3 resto = 9. Significa que el 1 de enero de 2023 habrán pasado 9 días
+desde la última luna nueva. */
+public class clas4ej4b {
+  public static void main(String[] args) {
+int año;
+    try{
+      BufferedReader entrada= new BufferedReader(new InputStreamReader(System.in));
+      System.out.println("ingrese el año que a usted le interesa:");
+      año = Integer.valueOf(entrada.readLine());
+      
+      año=año+1;
+     int numAureo = año%19;
+      int epacta= (numAureo-1)*11;
+     epacta = epacta%30;
+      
+      System.out.println("el 1 de enero del año elegido habran pasado "+epacta+" días desde la última nueva luna");
+    }
+    catch (Exception exc){
+      System.out.println(exc);
+    }
+  }
+}
