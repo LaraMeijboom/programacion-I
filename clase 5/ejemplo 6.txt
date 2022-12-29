@@ -1,0 +1,13 @@
+/*Dado un numero entero con valor inicial 1, hacer una iteración que haga
+incrementar numero de a uno hasta un valor MAX = 4 (constante). Mientras
+itera deberá imprimir numero
+*/
+public class clas5ejmp6 {
+  public static void main(String[] args) {
+    final int MAX =4;
+    
+    for(int numero=1; numero<=MAX; numero++){
+      System.out.println("el numero es: "+numero);
+    }
+  }
+}

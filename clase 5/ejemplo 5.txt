@@ -1,0 +1,23 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+/*Hacer un programa que mientras que el usuario cargue un numero entero distinto de 0 lo
+imprima
+*/
+public class clas5ejmp5 {
+  public static void main(String[] args) {
+    int num;
+    BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+    try{ 
+    do{
+      System.out.println("ingrese nro entero (0 para salir)" );
+      num=Integer.valueOf(entrada.readLine());
+        System.out.println("numero es: "+num);
+      }
+      while(num!=0);
+      } 
+      catch(Exception exc){
+        System.out.println(exc);
+      }
+    }
+   }
+  

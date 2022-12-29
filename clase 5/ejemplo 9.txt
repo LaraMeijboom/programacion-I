@@ -1,0 +1,30 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+/*Hacer un programa que mientras que el usuario cargue un numero entero entre 1 y 3, imprima el numero
+y la tabla de multiplicar del numero ingresado*/
+public class clas5ejmp9 {
+  public static void main(String[] args) {
+    final int MAX=3;
+    final int MIN=1;
+    int num;
+    final int MaxMultiplicador=10;
+  BufferedReader entrada=new BufferedReader(new InputStreamReader(System.in));
+   try{
+     System.out.println("Ingrese un numero entero entre "+MIN+" y "+MAX+", otro numero para salir:");   
+     num=Integer.valueOf(entrada.readLine());
+    
+     while((num>=1)&&(num<=3)){
+       System.out.println("numero es: "+num);
+       for(int i=1;i<=MaxMultiplicador;i++){
+         
+         System.out.println(num+ " * "+i+" = "+(num*i));
+       }
+ 
+     System.out.println("Ingrese un numero entero entre "+MIN+" y "+MAX+", otro numero para salir:");
+     num = Integer.valueOf(entrada.readLine());
+     } }
+    catch(Exception exc){
+      System.out.println(exc);
+    }
+  }
+}

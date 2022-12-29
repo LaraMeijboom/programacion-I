@@ -1,0 +1,30 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+/*Hacer un programa que mientras que el usuario cargue un numero entero entre 0 y 1000 (no incluidos),
+guarde el menor de los numeros ingresados. Al finalizar el ciclo imprima el menor por pantalla
+*/
+public class clas5ejmp10 {
+  public static void main(String[] args) {
+    final int MIN=0;
+    final int MAX=1000;
+    int numero;
+    int menor=MAX;
+    BufferedReader entrada=new BufferedReader(new InputStreamReader(System.in));
+    
+    try{
+      System.out.println("ingrese un entero entre "+MIN+" y "+MAX+" o cualquier otro para salir del bucle:");
+      numero=Integer.valueOf(entrada.readLine());
+while ((numero>MIN)&&(numero<MAX)){
+  if(numero<menor){
+    menor=numero;
+  }
+  System.out.println("ingrese un entero entre" +MIN+ " y "+MAX+" o cualquier otro para salitr del bucle:");
+  numero=Integer.valueOf(entrada.readLine());
+}  
+      System.out.println("el menor entero ingresado fue: "+menor);
+   }
+    catch (Exception exc){
+      System.out.println(exc);
+    }
+  }
+}
