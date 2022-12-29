@@ -1,0 +1,26 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+/*Escribir un programa que mientras el usuario ingrese un caracter letra
+minúscula, acumule la cantidad de vocales que ingreso. Finalmente
+muestre por pantalla dicha cantidad.*/
+public class clas5ej6 {
+  public static void main(String[] args) {
+    char caracter;
+    int suma=0;
+    BufferedReader entrada=new BufferedReader(new InputStreamReader(System.in));
+    try{
+      System.out.println("ingrese un caracter");
+      caracter = entrada.readLine().charAt(0);
+      while((caracter>='a')&&(caracter<='z')){
+        caracter=1;
+        suma=suma+caracter;
+        System.out.println("ingrese un caracter");
+        caracter=entrada.readLine().charAt(0);
+      }
+      System.out.println("la cantidad de caracteres ingresados es de: "+suma);
+    }
+    catch(Exception exc){
+      System.out.println(exc);
+    }
+  }
+}

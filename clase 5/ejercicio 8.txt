@@ -1,0 +1,32 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+/*Escribir un programa que mientras que el usuario ingrese un caracter letra
+minúscula, pida ingresar un numero entero. Si el número ingresado está
+entre 1 y 5 inclusive deberá imprimir la tabla de multiplicar de dicho
+numero.*/
+public class clas5ej8 {
+  public static void main(String[] args) {
+    final int MAX=11;
+    final int MIN=1;
+    char caracter;
+    BufferedReader entrada=new BufferedReader(new InputStreamReader(System.in));
+    
+    try{
+      System.out.println("ingrese un caracter:");
+      caracter=entrada.readLine().charAt(0);
+      while((caracter>='a')&&(caracter<='z')){
+        int entero;
+        System.out.println("ingrese un numero entero:");
+        entero=Integer.valueOf(entrada.readLine());
+        if((entero<=5)&&(entero>=1)){
+          for(int suma=0;suma<MAX;suma++){
+            System.out.println(suma+" * "+entero+" = "+(suma*entero));
+          }
+        }
+      }
+    }
+    catch (Exception exc){
+      System.out.println(exc);
+    }
+  }
+}

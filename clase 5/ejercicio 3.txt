@@ -1,0 +1,23 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+/*Escribir un programa que mientras que el usuario ingrese un número entero
+distinto de 0, pida ingresar otro número entero y lo imprima.*/
+public class clas5ej3 {
+  public static void main(String[] args) {
+    BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+    int entero;
+    try{
+      System.out.println("ingrese un entero (0 para finalizar)");
+      entero = Integer.valueOf(entrada.readLine());
+      while(entero!=0){
+        System.out.println("ingrese un entero:");
+      entero = Integer.valueOf(entrada.readLine());
+        System.out.println("el numero es: "+entero);
+      }
+    }
+  
+  catch (Exception exc){
+    System.out.println(exc);
+  }  
+  }
+}
