@@ -1,0 +1,30 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+/*Escribir un programa que mientras el usuario ingresa un caracter distinto
+del caracter ‘*’, muestre por pantalla si es caracter digito, o si es caracter
+vocal minúscula.*/
+public class clas5ej2 {
+  public static void main(String[] args) {
+    BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+    char caracter;
+    try{
+      System.out.println("ingrese un valor caracter:");
+       caracter = entrada.readLine().charAt(0);
+
+      while (caracter!= '*'){
+        System.out.println("ingrese un valor caracter:");
+        caracter = entrada.readLine().charAt(0);
+        if ((caracter>='0')&&(caracter<='9')){
+          System.out.println("el caracter es dígito");
+        }
+        else if ( caracter == 'a' ||caracter== 'e' || caracter=='i' || caracter=='o' || caracter== 'u'){
+          System.out.println("caracter es vocal minúscula");
+       }        
+      }      
+    }
+    catch (Exception exc){
+      System.out.println(exc);
+    }
+    
+  }
+}
