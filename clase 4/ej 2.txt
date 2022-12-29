@@ -1,0 +1,39 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+/*Hacer un programa que solicite la carga desde consola de
+un carácter y realice: imprima si es dígito, o letra minúscula, o
+es cualquier otro carácter. Si es letra minúscula indicar si es
+vocal o consonante.*/
+public class clas4practico2 {
+  public static void main(String[] args) {
+    
+    char caracter;
+    try{
+    BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("ingrese un caracter:");
+    caracter=entrada.readLine().charAt(0);
+      
+      if((caracter>='0')&&(caracter<='9')){
+        System.out.println("caracter es digito");
+         }
+      
+      else if((caracter<='z')&&(caracter>='a')){
+        System.out.println("es letra minuscula"); 
+        switch (caracter){
+          case 'a': case 'e': case'i':case 'o': case 'u':
+          System.out.println("es vocal");
+            break;
+             
+      default: {
+          System.out.println("es consonante");
+        }  } }
+        
+      else {
+        System.out.println("es otro caracter");
+      } 
+       }
+    catch(Exception exc){
+      System.out.println(exc);
+    }
+  }
+}
